@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    min-height: 72px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-container {
+    width: 100%;
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+}
+
+.logo span {
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+}
+
+.hamburg,
+.cancel {
+    cursor: pointer;
+    color: white;
+    display: none;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    background: none;
+    border: none;
+    z-index: 101;
+}
+
+.nav-container .hamburg {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    color: white;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #077b32;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before,
+.nav-container .links a.active::before {
+    width: 100%;
+}
+
+.nav-container .links a:hover,
+.nav-container .links a.active {
+    color: #077b32;
+}
+
+.dropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 120;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px black;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dropdown.active {
+    transform: translateY(0);
+}
+
+.dropdown .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    padding: 5.5rem 1rem 2rem;
+}
+
+.dropdown .links a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: 0.3s linear;
+}
+
+.dropdown .links a.active {
+    background-color: #077b32;
+}
+
+.dropdown .links a:hover {
+    background-color: #077b32;
+}
+
+.dropdown .cancel {
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+    z-index: 121;
+}
+
+/* Skills Section Styles */
+.skills-section {
+    width: 100%;
+    min-height: 90vh;
+    padding: 2rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.section-title span {
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(7, 123, 50, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(7, 123, 50, 0.2);
+}
+
+.skill-category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #077b32;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.skill-category h2 i {
+    font-size: 1.5rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: default;
+    border: 1px solid rgba(7, 123, 50, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    background-color: rgba(7, 123, 50, 0.1);
+    box-shadow: 0 5px 15px rgba(7, 123, 50, 0.3);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Skill Icon Colors */
+.python { background-color: #3776AB; }
+.html { background-color: #E34F26; }
+.css { background-color: #1572B6; }
+.js { background-color: #F7DF1E; color: #000 !important; }
+.mysql { background-color: #4479A1; }
+.dart { background-color: #0175C2; }
+.csharp { background-color: #239120; }
+.vscode { background-color: #007ACC; }
+.intellij { background-color: #000000; }
+.figma { background-color: #F24E1E; }
+.visualstudio { background-color: #5C2D91; }
+.androidstudio { background-color: #3DDC84; color: #000 !important; }
+
+/* Responsive Styles */
+@media (max-width: 884px) {
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburg,
+    .cancel {
+        display: block;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .skill-card h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .dropdown .links {
+        padding-top: 8vh;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .skill-category h2 {
+        font-size: 1.5rem;
+    }
+}
