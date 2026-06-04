@@ -10,6 +10,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="background-motion" aria-hidden="true">
+    <span class="motion-beam beam-1"></span>
+    <span class="motion-beam beam-2"></span>
+    <span class="motion-ring ring-1"></span>
+    <span class="motion-ring ring-2"></span>
+    <span class="motion-ring ring-3"></span>
+    <span class="motion-particle particle-1"></span>
+    <span class="motion-particle particle-2"></span>
+    <span class="motion-particle particle-3"></span>
+    <span class="motion-particle particle-4"></span>
+    <span class="motion-particle particle-5"></span>
+    <span class="motion-particle particle-6"></span>
+  </div>
   <nav>
     <div class="nav-container">
       <a class="logo" href="#home" data-aos="zoom-in" data-aos-duration="1500">
@@ -211,6 +224,55 @@
     <section id="projects" class="projects-section">
       <h1 class="section-title" data-aos="fade-down" data-aos-duration="1000">My <span>Projects</span></h1>
       <div class="projects-container">
+
+        <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+          <div class="project-image"><img src="drivemate.png" alt="DriveMate – Smart Driver Assistance Mobile Application"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>DriveMate – Smart Driver Assistance Mobile Application</h3>
+              <span class="project-role">Final Year Project – Full-Stack Mobile Developer</span>
+            </div>
+            <p>Designed and developed a location-aware mobile application that connects drivers with nearby garages, 
+              home mechanics, fuel stations, and EV charging providers during roadside emergencies. 
+              The system streamlines service discovery, emergency assistance, and communication through real-time 
+              location tracking, cloud-based data management, and role-based user access.</p>
+            <ul class="project-details">
+              <li><i class="fas fa-check-circle"></i> Developed a Flutter-based mobile application with Driver, Service Provider, and Admin modules.</li>
+              <li><i class="fas fa-check-circle"></i> Integrated Google Maps API and Geolocation services for real-time provider discovery and navigation.</li>
+              <li><i class="fas fa-check-circle"></i> Implemented roadside assistance request handling, SOS emergency support, ratings & reviews, and role-based authentication.</li>
+              <li><i class="fas fa-check-circle"></i> Built a scalable backend using Firebase Authentication and Cloud Firestore for secure user management and real-time data synchronization.</li>
+            </ul>
+            <div class="project-tech"><span>Flutter</span><span>dart</span><span>firebase</span><span>Cloud Firestore</span><span>Firebase Authentication</span><span>Google Maps API</span></div>
+            <div class="project-links">
+              <a href="https://github.com/ravidugunawardhana/drivemateapp" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fa-brands fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+          <div class="project-image"><img src="IOT.jpg" alt="IoT-Based Real-Time Buoy Monitoring System"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>IoT-Based Real-Time Buoy Monitoring System for Lake Ecosystems</h3>
+              <span class="project-role">Group Project - Hardware Developer (Water Unit)</span>
+            </div>
+            <p>Designed and deployed a solar-powered IoT buoy system that monitors lake ecosystems in real-time using weather and water quality sensors, LoRa communication, and AI-driven analytics with a custom dashboard.</p>
+            <ul class="project-details">
+              <li><i class="fas fa-check-circle"></i> Developed ESP32-based sensor nodes with high data accuracy.</li>
+              <li><i class="fas fa-check-circle"></i> Built Python analytics with Gemini AI API for anomaly detection.</li>
+              <li><i class="fas fa-check-circle"></i> Stored live data in Firebase Realtime Database.</li>
+            </ul>
+            <div class="project-tech"><span>Arduino IDE</span><span>C++</span><span>ESP32</span><span>Firebase</span></div>
+            <div class="project-links">
+              <a href="https://github.com/ravidugunawardhana" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fa-brands fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div> -->
+        
         <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
           <div class="project-image"><img src="IOT.jpg" alt="IoT-Based Real-Time Buoy Monitoring System"></div>
           <div class="project-content">
@@ -225,6 +287,11 @@
               <li><i class="fas fa-check-circle"></i> Stored live data in Firebase Realtime Database.</li>
             </ul>
             <div class="project-tech"><span>Arduino IDE</span><span>C++</span><span>ESP32</span><span>Firebase</span></div>
+            <div class="project-links">
+              <a href="https://github.com/ravidugunawardhana" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fa-brands fa-github"></i> View on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
@@ -242,6 +309,11 @@
               <li><i class="fas fa-check-circle"></i> Integrated Firebase authentication and storage.</li>
             </ul>
             <div class="project-tech"><span>Figma</span><span>Flutter</span><span>Dart</span><span>Firebase</span></div>
+            <div class="project-links">
+              <a href="https://github.com/ravidugunawardhana" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fa-brands fa-github"></i> View on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
@@ -259,6 +331,11 @@
               <li><i class="fas fa-check-circle"></i> Improved performance and accessibility.</li>
             </ul>
             <div class="project-tech"><span>Figma</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="project-links">
+              <a href="https://github.com/ravidugunawardhana" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fa-brands fa-github"></i> View on GitHub
+              </a>
+            </div>
           </div>
         </div>
       </div>

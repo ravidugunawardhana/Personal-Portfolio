@@ -50,7 +50,7 @@ function setActiveNavLink() {
 }
 
 function initTypewriter() {
-  const texts = ["Undergraduate", "Web Developer", "Figma UI Designer"];
+  const texts = ["Undergraduate", "Web App Developer","Mobile App Developer", "Figma Designer"];
   const typewriterText = document.querySelector(".typewriter-text");
 
   if (!typewriterText) {
